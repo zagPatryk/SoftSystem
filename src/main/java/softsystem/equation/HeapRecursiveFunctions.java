@@ -2,6 +2,7 @@ package softsystem.equation;
 
 public class HeapRecursiveFunctions extends Functions implements Algorithm {
 
+    @Override
     public void process(Integer[] elements) {
         recursiveMethod(elements.length, elements);
     }

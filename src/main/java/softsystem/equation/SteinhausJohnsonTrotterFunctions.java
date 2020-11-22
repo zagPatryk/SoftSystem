@@ -7,6 +7,7 @@ public class SteinhausJohnsonTrotterFunctions extends Functions implements Algor
     private Integer[] elements;
     private HashMap<Integer, String> direction;
 
+    @Override
     public void process(Integer[] elements) {
         this.elements = elements;
         index = new Integer[elements.length];

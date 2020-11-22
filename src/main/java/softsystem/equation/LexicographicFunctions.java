@@ -5,6 +5,7 @@ import java.util.Collections;
 
 public class LexicographicFunctions extends Functions implements Algorithm {
 
+    @Override
     public void process(Integer[] elements) {
         Arrays.sort(elements);
         boolean hasNext = true;

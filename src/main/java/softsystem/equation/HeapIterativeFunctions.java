@@ -2,6 +2,7 @@ package softsystem.equation;
 
 public class HeapIterativeFunctions extends Functions implements Algorithm {
 
+    @Override
     public void process(Integer[] elements) {
         int n = elements.length;
         int[] indexes = new int[n];
