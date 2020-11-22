@@ -3,7 +3,6 @@ package softsystem.equation;
 import java.util.Arrays;
 import java.util.Collections;
 
-// https://www.baeldung.com/java-array-permutations
 public class LexicographicFunctions extends Functions implements Algorithm {
 
     public void process(Integer[] elements) {

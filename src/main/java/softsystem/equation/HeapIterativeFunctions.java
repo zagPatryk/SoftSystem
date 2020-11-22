@@ -1,9 +1,8 @@
 package softsystem.equation;
 
-// https://www.baeldung.com/java-array-permutations
 public class HeapIterativeFunctions extends Functions implements Algorithm {
 
-   public void process(Integer[] elements) {
+    public void process(Integer[] elements) {
         int n = elements.length;
         int[] indexes = new int[n];
 

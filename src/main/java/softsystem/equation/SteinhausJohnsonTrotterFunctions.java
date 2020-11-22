@@ -2,9 +2,7 @@ package softsystem.equation;
 
 import java.util.HashMap;
 
-// https://code.sololearn.com/cz8eU44ocu26/#java
 public class SteinhausJohnsonTrotterFunctions extends Functions implements Algorithm {
-
     private Integer[] index;
     private Integer[] elements;
     private HashMap<Integer, String> direction;

@@ -1,13 +1,12 @@
 package softsystem.equation;
 
-// https://www.baeldung.com/java-array-permutations
 public class HeapRecursiveFunctions extends Functions implements Algorithm {
 
     public void process(Integer[] elements) {
         recursiveMethod(elements.length, elements);
     }
 
-    public void recursiveMethod(int n, Integer[] elements) {
+    public void recursiveMethodC(int n, Integer[] elements) {
         if(n == 1) {
             equationSolver(elements);
         } else {
@@ -18,6 +17,19 @@ public class HeapRecursiveFunctions extends Functions implements Algorithm {
                 } else {
                     swap(elements, 0, n-1);
                 }
+            }
+            recursiveMethod(n - 1, elements);
+        }
+    }
+
+    public void recursiveMethod(int n, Integer[] elements) {
+        if(n == elements.length - 1) {
+            equationSolver(elements);
+        } else {
+            for(int i = n; i < elements.length; i++) {
+                swap(elements, i, n);
+                recursiveMethodC(n+1, elements);
+                swap(elements, i, n);
             }
             recursiveMethod(n - 1, elements);
         }
