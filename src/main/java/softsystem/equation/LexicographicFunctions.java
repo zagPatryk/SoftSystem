@@ -4,9 +4,9 @@ import java.util.Arrays;
 import java.util.Collections;
 
 // https://www.baeldung.com/java-array-permutations
-public class LexicographicFunctions extends Functions {
+public class LexicographicFunctions extends Functions implements Algorithm {
 
-    public void lexicographicalAlgorithm(Integer[] elements) {
+    public void process(Integer[] elements) {
         Arrays.sort(elements);
         boolean hasNext = true;
 
@@ -32,5 +32,10 @@ public class LexicographicFunctions extends Functions {
             swap(elements, k, l);
             Collections.reverse(Arrays.asList(elements).subList(k + 1, elements.length));
         }
+    }
+
+    @Override
+    public void printName() {
+        System.out.println("Lexicographic Functions");
     }
 }

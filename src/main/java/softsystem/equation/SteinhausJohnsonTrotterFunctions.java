@@ -3,20 +3,20 @@ package softsystem.equation;
 import java.util.HashMap;
 
 // https://code.sololearn.com/cz8eU44ocu26/#java
-public class SteinhausJohnsonTrotterFunctions extends Functions {
+public class SteinhausJohnsonTrotterFunctions extends Functions implements Algorithm {
 
     private Integer[] index;
     private Integer[] elements;
     private HashMap<Integer, String> direction;
 
-    public void steinhausJohnsonTrotterAlgorithm(Integer[] elements) {
+    public void process(Integer[] elements) {
         this.elements = elements;
         index = new Integer[elements.length];
         direction = new HashMap<>();
-        processAlgorithm();
+        steinhausJohnsonTrotterAlgorithm();
     }
 
-    public void processAlgorithm() {
+    public void steinhausJohnsonTrotterAlgorithm() {
         for(int i = 0; i < index.length; i++){
             index[i] = i;
             direction.put(i, "left");
@@ -92,5 +92,10 @@ public class SteinhausJohnsonTrotterFunctions extends Functions {
             results[i] = elements[index[i]];
         }
         equationSolver(results);
+    }
+
+    @Override
+    public void printName() {
+        System.out.println("Steinhaus Johnson Trotter Functions");
     }
 }
