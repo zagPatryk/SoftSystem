@@ -25,6 +25,6 @@ public class HeapIterativeFunctions extends AlgorithmsFunctions implements Algor
 
     @Override
     public void printName() {
-        System.out.println("Heap Iterative AlgorithmsFunctions");
+        System.out.println("Heap Iterative Algorithm");
     }
 }

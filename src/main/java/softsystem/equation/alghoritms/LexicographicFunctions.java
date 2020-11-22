@@ -36,6 +36,6 @@ public class LexicographicFunctions extends AlgorithmsFunctions implements Algor
 
     @Override
     public void printName() {
-        System.out.println("Lexicographic AlgorithmsFunctions");
+        System.out.println("Lexicographic Algorithm");
     }
 }

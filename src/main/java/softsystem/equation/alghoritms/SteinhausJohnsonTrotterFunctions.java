@@ -95,6 +95,6 @@ public class SteinhausJohnsonTrotterFunctions extends AlgorithmsFunctions implem
 
     @Override
     public void printName() {
-        System.out.println("Steinhaus Johnson Trotter AlgorithmsFunctions");
+        System.out.println("Steinhaus Johnson Trotter Algorithm");
     }
 }

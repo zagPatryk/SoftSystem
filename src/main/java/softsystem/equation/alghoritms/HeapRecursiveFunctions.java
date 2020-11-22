@@ -25,6 +25,6 @@ public class HeapRecursiveFunctions extends AlgorithmsFunctions implements Algor
 
     @Override
     public void printName() {
-        System.out.println("Heap Recursive AlgorithmsFunctions");
+        System.out.println("Heap Recursive Algorithm");
     }
 }
