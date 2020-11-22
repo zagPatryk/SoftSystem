@@ -1,9 +1,9 @@
-package softsystem.equation;
+package softsystem.equation.alghoritms;
 
 import java.util.Arrays;
 import java.util.Collections;
 
-public class LexicographicFunctions extends Functions implements Algorithm {
+public class LexicographicFunctions extends AlgorithmsFunctions implements Algorithm {
 
     @Override
     public void process(Integer[] elements) {
@@ -36,6 +36,6 @@ public class LexicographicFunctions extends Functions implements Algorithm {
 
     @Override
     public void printName() {
-        System.out.println("Lexicographic Functions");
+        System.out.println("Lexicographic AlgorithmsFunctions");
     }
 }

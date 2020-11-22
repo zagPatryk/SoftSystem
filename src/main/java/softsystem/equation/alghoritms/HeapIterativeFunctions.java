@@ -1,6 +1,6 @@
-package softsystem.equation;
+package softsystem.equation.alghoritms;
 
-public class HeapIterativeFunctions extends Functions implements Algorithm {
+public class HeapIterativeFunctions extends AlgorithmsFunctions implements Algorithm {
 
     @Override
     public void process(Integer[] elements) {
@@ -25,6 +25,6 @@ public class HeapIterativeFunctions extends Functions implements Algorithm {
 
     @Override
     public void printName() {
-        System.out.println("Heap Iterative Functions");
+        System.out.println("Heap Iterative AlgorithmsFunctions");
     }
 }

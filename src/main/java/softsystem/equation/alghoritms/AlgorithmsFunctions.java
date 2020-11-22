@@ -1,9 +1,8 @@
-package softsystem.equation;
+package softsystem.equation.alghoritms;
 
 import java.util.Arrays;
 
-public class Functions {
-    private final Integer[] elements = {1,2,3,4,5,6,7,8,9};
+public class AlgorithmsFunctions {
 
     public void equationSolver(Integer[] elements) {
         if (elements.length == 9) {
@@ -23,22 +22,5 @@ public class Functions {
         int tmpElement = elements[a];
         elements[a] = elements[b];
         elements[b] = tmpElement;
-    }
-
-    public void processAlgorithm(Algorithm algorithm) {
-
-        System.out.println("/* Start Obliczeń */");
-        algorithm.printName();
-        long startTime = System.currentTimeMillis();
-
-        System.out.println("/* Obliczenia */");
-        algorithm.process(elements);
-
-        System.out.println("/* Koniec obliczeń */");
-        long endTime = System.currentTimeMillis();
-        long result = endTime - startTime;
-        System.out.println("Czas obliczeń: " + result);
-
-        System.out.println();
     }
 }

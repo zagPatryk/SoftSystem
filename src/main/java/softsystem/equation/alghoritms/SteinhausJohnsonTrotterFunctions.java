@@ -1,8 +1,8 @@
-package softsystem.equation;
+package softsystem.equation.alghoritms;
 
 import java.util.HashMap;
 
-public class SteinhausJohnsonTrotterFunctions extends Functions implements Algorithm {
+public class SteinhausJohnsonTrotterFunctions extends AlgorithmsFunctions implements Algorithm {
     private Integer[] index;
     private Integer[] elements;
     private HashMap<Integer, String> direction;
@@ -25,7 +25,7 @@ public class SteinhausJohnsonTrotterFunctions extends Functions implements Algor
         while(mobile != -1){
             mobile = getMobile();
             createPermutation();
-            swapRunner(mobile);
+            swapMobile(mobile);
         }
     }
 
@@ -70,7 +70,7 @@ public class SteinhausJohnsonTrotterFunctions extends Functions implements Algor
         return maxMobile;
     }
 
-    public void swapRunner(int mobile){
+    public void swapMobile(int mobile){
         int x = 0;
         for(int i = 0; i < index.length; i++){
             if(mobile == index[i]){
@@ -95,6 +95,6 @@ public class SteinhausJohnsonTrotterFunctions extends Functions implements Algor
 
     @Override
     public void printName() {
-        System.out.println("Steinhaus Johnson Trotter Functions");
+        System.out.println("Steinhaus Johnson Trotter AlgorithmsFunctions");
     }
 }
