@@ -1,6 +1,6 @@
 package softsystem.pyramid;
 
-public class Start {
+public class StartPyramid {
     public static void main(String[] args) {
         Functions functions = new Functions();
 
