@@ -1,0 +1,110 @@
+// Zadanie 1: Piramida:
+W mainie zwyczjanie wywołałem funkcje i wypisałem je na ekran:
+
+System.out.println(functions.countElements(4));
+System.out.println(functions.getBlockNumber(2,2,2,3));
+
+Rezultaty:
+30
+13
+
+I dodałem kilka prostych testów jednostkowych, które 'przechodzą'
+
+        // When
+        int countedElements = functions.countElements(4);
+        int countedElementsZero = functions.countElements(0);
+        int countedElementsNegative = functions.countElements(-1);
+
+        // Then
+        Assert.assertEquals(30, countedElements);
+        Assert.assertEquals(-1, countedElementsZero);
+        Assert.assertEquals(-1, countedElementsNegative);
+
+Results pn screen:
+    -
+---
+        // When
+        int exampleFromTask = functions.getBlockNumber(1,2,2,4);
+        int incorrectRow = functions.getBlockNumber(40,2,2,4);
+        int incorrectColumn = functions.getBlockNumber(1,40,2,4);
+        int incorrectLevel = functions.getBlockNumber(1,2,80,4);
+        int incorrectBaseSize = functions.getBlockNumber(0,0,0,0);
+
+        // Then
+        Assert.assertEquals(18, exampleFromTask);
+        Assert.assertEquals(-1, incorrectRow);
+        Assert.assertEquals(-1, incorrectColumn);
+        Assert.assertEquals(-1, incorrectLevel);
+        Assert.assertEquals(-1, incorrectBaseSize);
+
+Results on screen:
+        The row, column and level cannot be larger than the base size
+        The row, column and level cannot be larger than the base size
+        The row, column and level cannot be larger than the base size
+        Numbers cannot be less than or equal to 0
+        Number cannot be less than or equal to 0
+        Number cannot be less than or equal to 0
+
+// Zadanie 2: Równanie:
+
+Opierając się między innymi na https://www.codeproject.com/Articles/1250925/Permutations-Fast-implementations-and-a-new-indexi
+zauważyłem że algorytm Heap jest jednym z najszybszych. W swoim rozwiazaniu go użyłem i dodatkowo dodałem 2 inne algorytmy
+dla porównania.
+
+Zapisałem kod wykorzystujący 3 algorytmy: Heap (iteracyjnie i rekurencyjnie),
+Leksykograficzny i Steinhaus Johnson Trottera
+
+HeapRecursive - najszybszy przy rozwiazaniu zadania z równaniem
+HeapIterative - szybszy przy tworzeniu permutacji o wieszkej ilości elementów np 12 (nie odnosi się bezpośrednio do zadania)
+
+W classie startEquation można wywołać je wszystkie:
+AlgorithmRunner algorithmRunner = new AlgorithmRunner(elements);
+        algorithmRunner.processAlgorithm(new HeapIterativeFunctions());
+        algorithmRunner.processAlgorithm(new HeapRecursiveFunctions());
+        algorithmRunner.processAlgorithm(new LexicographicFunctions());
+        algorithmRunner.processAlgorithm(new SteinhausJohnsonTrotterFunctions());
+
+Wynik przy wszystkich algorytmach:
+
+/* Start Obliczeń */
+Heap Iterative Algorithm
+/* Obliczenia */
+[3, 5, 8, 1, 7, 4, 2, 9, 6]
+[2, 7, 8, 1, 5, 6, 3, 9, 4]
+[6, 2, 9, 1, 7, 4, 5, 8, 3]
+[4, 3, 9, 1, 5, 6, 7, 8, 2]
+/* Koniec obliczeń */
+Czas obliczeń: 13
+
+/* Start Obliczeń */
+Heap Recursive Algorithm
+/* Obliczenia */
+[3, 5, 8, 1, 7, 4, 2, 9, 6]
+[2, 7, 8, 1, 5, 6, 3, 9, 4]
+[6, 2, 9, 1, 7, 4, 5, 8, 3]
+[4, 3, 9, 1, 5, 6, 7, 8, 2]
+/* Koniec obliczeń */
+Czas obliczeń: 9
+
+/* Start Obliczeń */
+Lexicographic Algorithm
+/* Obliczenia */
+[2, 7, 8, 1, 5, 6, 3, 9, 4]
+[3, 5, 8, 1, 7, 4, 2, 9, 6]
+[4, 3, 9, 1, 5, 6, 7, 8, 2]
+[6, 2, 9, 1, 7, 4, 5, 8, 3]
+/* Koniec obliczeń */
+Czas obliczeń: 33
+
+/* Start Obliczeń */
+Steinhaus Johnson Trotter Algorithm
+/* Obliczenia */
+[4, 3, 9, 1, 5, 6, 7, 8, 2]
+[6, 2, 9, 1, 7, 4, 5, 8, 3]
+[2, 7, 8, 1, 5, 6, 3, 9, 4]
+[3, 5, 8, 1, 7, 4, 2, 9, 6]
+/* Koniec obliczeń */
+Czas obliczeń: 46
+
+Wszystkie algorytmy 'przeskakują' przez wszystkie permutacje (liczba przejść sie zgadza). Jeżeli to konieczne do mogę dorzucić
+licznik.
