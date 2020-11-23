@@ -24,5 +24,7 @@ public class StartEquation {
  * http://combos.org/perm - generator
  * https://en.wikipedia.org/wiki/Permutation#Permutations_in_computing - wiki
  * https://www.baeldung.com/java-array-permutations - heap, lexico
- * https://code.sololearn.com/cz8eU44ocu26/#java - sjt
+ * https://code.sololearn.com/cz8eU44ocu26/#java - sjt algorithm
+ * https://www.geeksforgeeks.org/johnson-trotter-algorithm/ - sjt theory
+ * https://stackoverflow.com/questions/3255/big-o-how-do-you-calculate-approximate-it - big o
  */
