@@ -22,7 +22,7 @@ public class SteinhausJohnsonTrotterFunctions extends AlgorithmsFunctions implem
         }
 
         int mobile = 0;
-        while (mobile != -1) {
+        while(mobile != -1) {
             mobile = getMobile();
             createPermutation();
             swapMobile(mobile);
