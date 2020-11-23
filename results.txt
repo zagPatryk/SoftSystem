@@ -74,7 +74,8 @@ Heap Iterative Algorithm
 [6, 2, 9, 1, 7, 4, 5, 8, 3]
 [4, 3, 9, 1, 5, 6, 7, 8, 2]
 /* Koniec obliczeń */
-Czas obliczeń: 13
+Czas obliczeń: 13099800 nanosec
+Czas obliczeń: 13.0998 milisec
 
 /* Start Obliczeń */
 Heap Recursive Algorithm
@@ -84,7 +85,8 @@ Heap Recursive Algorithm
 [6, 2, 9, 1, 7, 4, 5, 8, 3]
 [4, 3, 9, 1, 5, 6, 7, 8, 2]
 /* Koniec obliczeń */
-Czas obliczeń: 9
+Czas obliczeń: 9550200 nanosec
+Czas obliczeń: 9.5502 milisec
 
 /* Start Obliczeń */
 Lexicographic Algorithm
@@ -94,7 +96,8 @@ Lexicographic Algorithm
 [4, 3, 9, 1, 5, 6, 7, 8, 2]
 [6, 2, 9, 1, 7, 4, 5, 8, 3]
 /* Koniec obliczeń */
-Czas obliczeń: 33
+Czas obliczeń: 31772800 nanosec
+Czas obliczeń: 31.7728 milisec
 
 /* Start Obliczeń */
 Steinhaus Johnson Trotter Algorithm
@@ -104,7 +107,8 @@ Steinhaus Johnson Trotter Algorithm
 [2, 7, 8, 1, 5, 6, 3, 9, 4]
 [3, 5, 8, 1, 7, 4, 2, 9, 6]
 /* Koniec obliczeń */
-Czas obliczeń: 46
+Czas obliczeń: 43874400 nanosec
+Czas obliczeń: 43.8744 milisec
 
 Wszystkie algorytmy 'przeskakują' przez wszystkie permutacje (liczba przejść sie zgadza). Jeżeli to konieczne do mogę dorzucić
 licznik.
