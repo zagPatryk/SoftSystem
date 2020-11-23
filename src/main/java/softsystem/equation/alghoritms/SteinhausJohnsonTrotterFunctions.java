@@ -16,13 +16,13 @@ public class SteinhausJohnsonTrotterFunctions extends AlgorithmsFunctions implem
     }
 
     public void steinhausJohnsonTrotterAlgorithm() {
-        for(int i = 0; i < index.length; i++){
+        for (int i = 0; i < index.length; i++) {
             index[i] = i;
             direction.put(i, "left");
         }
 
         int mobile = 0;
-        while(mobile != -1){
+        while (mobile != -1) {
             mobile = getMobile();
             createPermutation();
             swapMobile(mobile);
@@ -32,19 +32,19 @@ public class SteinhausJohnsonTrotterFunctions extends AlgorithmsFunctions implem
     public int getMobile(){
         int lm1 = index.length - 1;
         int maxMobile = -1;
-        if(direction.get(index[0]) == "right"){
-            if(index[0] > index[1]){
+        if(direction.get(index[0]) == "right") {
+            if(index[0] > index[1]) {
                 maxMobile = index[0];
             }
         }
 
-        for(int i = 1; i < lm1; i++){
-            if(index[i] > maxMobile){
-                if(direction.get(index[i]) == "left"){
+        for(int i = 1; i < lm1; i++) {
+            if(index[i] > maxMobile) {
+                if (direction.get(index[i]) == "left") {
                     if(index[i] > index[i-1]) {
                         maxMobile = index[i];
                     }
-                }else{
+                } else {
                     if(index[i] > index[i + 1]) {
                         maxMobile = index[i];
                     }
@@ -52,15 +52,15 @@ public class SteinhausJohnsonTrotterFunctions extends AlgorithmsFunctions implem
             }
         }
 
-        if(direction.get(lm1) == "left"){
-            if(index[lm1] > maxMobile && index[lm1] > index[lm1-1]){
+        if(direction.get(lm1) == "left") {
+            if(index[lm1] > maxMobile && index[lm1] > index[lm1-1]) {
                 maxMobile = index[lm1];
             }
         }
 
-        for (int j : index) {
-            if (maxMobile < j) {
-                if (direction.get(j) == "left") {
+        for(int j : index) {
+            if(maxMobile < j) {
+                if(direction.get(j) == "left") {
                     direction.put(j, "right");
                 } else {
                     direction.put(j, "left");
@@ -70,24 +70,23 @@ public class SteinhausJohnsonTrotterFunctions extends AlgorithmsFunctions implem
         return maxMobile;
     }
 
-    public void swapMobile(int mobile){
+    public void swapMobile(int mobile) {
         int x = 0;
-        for(int i = 0; i < index.length; i++){
+        for(int i = 0; i < index.length; i++) {
             if(mobile == index[i]){
                 x = i;
             }
         }
-
-        if(direction.get(mobile) == "left"){
+        if(direction.get(mobile) == "left") {
             swap(index, x, x - 1);
-        }else{
+        } else {
             swap(index, x, x + 1);
         }
     }
 
     public void createPermutation() {
-        Integer[] results = new Integer[index.length];;
-        for(int i = 0; i < index.length; i++){
+        Integer[] results = new Integer[index.length];
+        for(int i = 0; i < index.length; i++) {
             results[i] = elements[index[i]];
         }
         equationSolver(results);
