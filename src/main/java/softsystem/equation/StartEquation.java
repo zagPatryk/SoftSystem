@@ -27,4 +27,5 @@ public class StartEquation {
  * https://code.sololearn.com/cz8eU44ocu26/#java - sjt algorithm
  * https://www.geeksforgeeks.org/johnson-trotter-algorithm/ - sjt theory
  * https://stackoverflow.com/questions/3255/big-o-how-do-you-calculate-approximate-it - big o
+ * https://www.coursera.org/lecture/data-structures-optimizing-performance/core-counting-operations-59690 - operations
  */

@@ -8,7 +8,6 @@ public class HeapIterativeFunctions extends AlgorithmsFunctions implements Algor
         int[] indexes = new int[n];
 
         equationSolver(elements);
-
         int i = 0;
         while (i < n) {
             if (indexes[i] < i) {
@@ -21,7 +20,7 @@ public class HeapIterativeFunctions extends AlgorithmsFunctions implements Algor
                 i++;
             }
         }
-   }
+    }
 
     @Override
     public void printName() {
