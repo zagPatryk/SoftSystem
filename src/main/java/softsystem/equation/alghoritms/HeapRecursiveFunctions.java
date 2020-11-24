@@ -11,15 +11,15 @@ public class HeapRecursiveFunctions extends AlgorithmsFunctions implements Algor
         if(n == 1) {
             equationSolver(elements);
         } else {
-            recursiveMethod(n - 1, elements);
             for(int i = 0; i < n-1; i++) {
+                recursiveMethod(n - 1, elements);
                 if(n % 2 == 0) {
                     swap(elements, i, n-1);
                 } else {
                     swap(elements, 0, n-1);
                 }
-            recursiveMethod(n - 1, elements);
             }
+            recursiveMethod(n - 1, elements);
         }
     }
 

@@ -20,8 +20,9 @@ I dodałem kilka prostych testów jednostkowych, które 'przechodzą'
         Assert.assertEquals(-1, countedElementsZero);
         Assert.assertEquals(-1, countedElementsNegative);
 
-Results pn screen:
-    -
+Results on screen:
+    Number cannot be less than or equal to 0
+    Number cannot be less than or equal to 0
 ---
         // When
         int exampleFromTask = functions.getBlockNumber(1,2,2,4);
@@ -38,12 +39,10 @@ Results pn screen:
         Assert.assertEquals(-1, incorrectBaseSize);
 
 Results on screen:
-        The row, column and level cannot be larger than the base size
-        The row, column and level cannot be larger than the base size
-        The row, column and level cannot be larger than the base size
-        Numbers cannot be less than or equal to 0
-        Number cannot be less than or equal to 0
-        Number cannot be less than or equal to 0
+    The row, column and level cannot be larger than the base size
+    The row, column and level cannot be larger than the base size
+    The row, column and level cannot be larger than the base size
+    Numbers cannot be less than or equal to 0
 
 // Zadanie 2: Równanie:
 
@@ -66,45 +65,49 @@ AlgorithmRunner algorithmRunner = new AlgorithmRunner(elements);
 
 Wynik przy wszystkich algorytmach:
 
-/* Start Obliczeń */
-Heap Iterative Algorithm
-/* Obliczenia */
-[3, 5, 8, 1, 7, 4, 2, 9, 6]
-[2, 7, 8, 1, 5, 6, 3, 9, 4]
-[6, 2, 9, 1, 7, 4, 5, 8, 3]
-[4, 3, 9, 1, 5, 6, 7, 8, 2]
-/* Koniec obliczeń */
-Czas obliczeń: 13
+    Heap Iterative Algorithm
+    /* Obliczenia */
+    [3, 5, 8, 1, 7, 4, 2, 9, 6]
+    [2, 7, 8, 1, 5, 6, 3, 9, 4]
+    [6, 2, 9, 1, 7, 4, 5, 8, 3]
+    [4, 3, 9, 1, 5, 6, 7, 8, 2]
+    /* Koniec obliczeń */
+    Czas obliczeń: 10518600 nanosec
+    Czas obliczeń: 10.5186 milisec
 
-/* Start Obliczeń */
-Heap Recursive Algorithm
-/* Obliczenia */
-[3, 5, 8, 1, 7, 4, 2, 9, 6]
-[2, 7, 8, 1, 5, 6, 3, 9, 4]
-[6, 2, 9, 1, 7, 4, 5, 8, 3]
-[4, 3, 9, 1, 5, 6, 7, 8, 2]
-/* Koniec obliczeń */
-Czas obliczeń: 9
+    /* Start Obliczeń */
+    Heap Recursive Algorithm
+    /* Obliczenia */
+    [3, 5, 8, 1, 7, 4, 2, 9, 6]
+    [2, 7, 8, 1, 5, 6, 3, 9, 4]
+    [6, 2, 9, 1, 7, 4, 5, 8, 3]
+    [4, 3, 9, 1, 5, 6, 7, 8, 2]
+    /* Koniec obliczeń */
+    Czas obliczeń: 9482200 nanosec
+    Czas obliczeń: 9.4822 milisec
+    // (przed wymianą miejsca wywołania metod trwało ok 0.4 sek dłużej w najlepszym przypadku)
 
-/* Start Obliczeń */
-Lexicographic Algorithm
-/* Obliczenia */
-[2, 7, 8, 1, 5, 6, 3, 9, 4]
-[3, 5, 8, 1, 7, 4, 2, 9, 6]
-[4, 3, 9, 1, 5, 6, 7, 8, 2]
-[6, 2, 9, 1, 7, 4, 5, 8, 3]
-/* Koniec obliczeń */
-Czas obliczeń: 33
+    /* Start Obliczeń */
+    Lexicographic Algorithm
+    /* Obliczenia */
+    [2, 7, 8, 1, 5, 6, 3, 9, 4]
+    [3, 5, 8, 1, 7, 4, 2, 9, 6]
+    [4, 3, 9, 1, 5, 6, 7, 8, 2]
+    [6, 2, 9, 1, 7, 4, 5, 8, 3]
+    /* Koniec obliczeń */
+    Czas obliczeń: 31933000 nanosec
+    Czas obliczeń: 31.933 milisec
 
-/* Start Obliczeń */
-Steinhaus Johnson Trotter Algorithm
-/* Obliczenia */
-[4, 3, 9, 1, 5, 6, 7, 8, 2]
-[6, 2, 9, 1, 7, 4, 5, 8, 3]
-[2, 7, 8, 1, 5, 6, 3, 9, 4]
-[3, 5, 8, 1, 7, 4, 2, 9, 6]
-/* Koniec obliczeń */
-Czas obliczeń: 46
+    /* Start Obliczeń */
+    Steinhaus Johnson Trotter Algorithm
+    /* Obliczenia */
+    [3, 5, 8, 1, 7, 4, 2, 9, 6]
+    [4, 3, 9, 1, 5, 6, 7, 8, 2]
+    [6, 2, 9, 1, 7, 4, 5, 8, 3]
+    [2, 7, 8, 1, 5, 6, 3, 9, 4]
+    /* Koniec obliczeń */
+    Czas obliczeń: 43609400 nanosec
+    Czas obliczeń: 43.6094 milisec
 
 Wszystkie algorytmy 'przeskakują' przez wszystkie permutacje (liczba przejść sie zgadza). Jeżeli to konieczne do mogę dorzucić
 licznik.
