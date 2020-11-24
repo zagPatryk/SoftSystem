@@ -16,7 +16,7 @@ public class SteinhausJohnsonTrotterFunctions extends AlgorithmsFunctions implem
     }
 
     public void steinhausJohnsonTrotterAlgorithm() {
-        for (int i = 0; i < index.length; i++) {
+        for(int i = 0; i < index.length; i++) {
             index[i] = i;
             direction.put(i, "left");
         }
